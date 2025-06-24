@@ -1,9 +1,9 @@
 package com.hb.cda.projecttodevs.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Theme {
@@ -12,6 +12,9 @@ public class Theme {
 
     private Integer id;
     private String name;
+
+    @OneToMany(mappedBy = "theme")
+    private List<Project> projects = new ArrayList<>();
 
     public Theme() {
     }
@@ -37,5 +40,13 @@ public class Theme {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(List<Project> projects) {
+        this.projects = projects;
     }
 }
