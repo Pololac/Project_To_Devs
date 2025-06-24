@@ -4,9 +4,14 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="main">
-        <class>com.hb.cda.</class>
-        <class>com.hb.cda.</class>
-        <class>com.hb.cda.</class>
+        <class>com.hb.cda.projecttodevs.entity.Project</class>
+        <class>com.hb.cda.projecttodevs.entity.User</class>
+        <class>com.hb.cda.projecttodevs.entity.Dev</class>
+        <class>com.hb.cda.projecttodevs.entity.ProductOwner</class>
+        <class>com.hb.cda.projecttodevs.entity.Theme</class>
+        <class>com.hb.cda.projecttodevs.entity.Application</class>
+
+
 
         <properties>
             <!-- Configuration connexion MySQL -->
