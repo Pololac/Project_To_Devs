@@ -3,6 +3,8 @@ package com.hb.cda.projecttodevs.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Project {
@@ -14,6 +16,15 @@ public class Project {
     private String description;
     private LocalDate deliveryDate;
     private float budget;
+
+    @ManyToOne
+    private ProductOwner owner;
+
+    @ManyToOne
+    private Theme theme;
+
+    @OneToMany(mappedBy = "project")
+    private List<Application> applications = new ArrayList<>();
 
     public Project() {
     }
@@ -72,4 +83,30 @@ public class Project {
     public void setBudget(float budget) {
         this.budget = budget;
     }
+
+    public ProductOwner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(ProductOwner owner) {
+        this.owner = owner;
+    }
+
+    public Theme getTheme() {
+        return theme;
+    }
+
+    public void setTheme(Theme theme) {
+        this.theme = theme;
+    }
+
+    public List<Application> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Application> applications) {
+        this.applications = applications;
+    }
+
+
 }

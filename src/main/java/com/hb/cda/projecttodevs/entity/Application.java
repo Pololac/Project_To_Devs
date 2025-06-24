@@ -15,6 +15,12 @@ public class Application {
     @Enumerated(EnumType.STRING)
     private ApplicationStatus status;
 
+    @ManyToOne
+    private Project project;
+
+    @ManyToOne
+    private Dev dev;
+
     public Application() {
     }
 
@@ -61,5 +67,21 @@ public class Application {
 
     public void setStatus(ApplicationStatus status) {
         this.status = status;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    public Dev getDev() {
+        return dev;
+    }
+
+    public void setDev(Dev dev) {
+        this.dev = dev;
     }
 }

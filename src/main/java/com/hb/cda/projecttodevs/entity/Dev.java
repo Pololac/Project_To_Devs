@@ -1,6 +1,12 @@
 package com.hb.cda.projecttodevs.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Dev extends User{
@@ -8,6 +14,12 @@ public class Dev extends User{
     private String lastname;
     private String description;
     private String seniority;
+
+    @OneToMany(mappedBy = "dev")
+    private List<Application> applications = new ArrayList<>();
+
+    @ManyToMany
+    private List<Skill> skills = new ArrayList<>();
 
     public Dev() {}
 
@@ -56,5 +68,13 @@ public class Dev extends User{
 
     public void setSeniority(String seniority) {
         this.seniority = seniority;
+    }
+
+    public List<Application> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Application> applications) {
+        this.applications = applications;
     }
 }
