@@ -21,6 +21,7 @@ public class Dev extends User{
     @ManyToMany
     private List<Skill> skills = new ArrayList<>();
 
+
     public Dev() {}
 
     public Dev(String username, String password, String email, String firstname, String lastname, String description, String seniority) {
@@ -76,5 +77,27 @@ public class Dev extends User{
 
     public void setApplications(List<Application> applications) {
         this.applications = applications;
+    }
+
+    public void addApplication(Application application) {
+        if (applications == null) {
+            applications = new ArrayList<>();
+        }
+        applications.add(application);
+    }
+
+    public List<Skill> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<Skill> skills) {
+        this.skills = skills;
+    }
+
+    public void addSkill(Skill skill) {
+        if (skills == null) {
+            skills = new ArrayList<>();
+        }
+        skills.add(skill);
     }
 }
