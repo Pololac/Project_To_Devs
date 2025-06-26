@@ -1,7 +1,6 @@
 package com.hb.cda.projecttodevs.repository.utils;
 
 import com.hb.cda.projecttodevs.entity.*;
-import com.hb.cda.projecttodevs.repository.Database;
 import jakarta.persistence.EntityManager;
 
 import java.time.LocalDate;
@@ -12,8 +11,8 @@ public class DataSeeder {
         ProductOwner owner1 = new ProductOwner("owner1", "123456","owner1@test.com","TechCorp");
         ProductOwner owner2 = new ProductOwner("owner2", "123456","owner2@test.com","AICorp");
 
-        Dev dev1 = new Dev("dev1", "123456", "dev1@test.com", "Bobby", "Lapointe", "Full-stack developer", "7" );
-        Dev dev2 = new Dev("dev2", "123456", "dev2@test.com", "Franck", "Ocean", "Front developer", "2" );
+        Dev dev1 = new Dev("dev1", "123456", "dev1@test.com", "Bobby", "Lapointe", "Full-stack developer", 7);
+        Dev dev2 = new Dev("dev2", "123456", "dev2@test.com", "Franck", "Ocean", "Front developer", 2);
 
 
         Skill skill1 = new Skill("Java");
