@@ -13,7 +13,7 @@ public class Dev extends User{
     private String firstname;
     private String lastname;
     private String description;
-    private String seniority;
+    private int seniority;
 
     @OneToMany(mappedBy = "dev")
     private List<Application> applications = new ArrayList<>();
@@ -24,14 +24,14 @@ public class Dev extends User{
 
     public Dev() {}
 
-    public Dev(String username, String password, String email, String firstname, String lastname, String description, String seniority) {
+    public Dev(String username, String password, String email, String firstname, String lastname, String description, int seniority) {
         super(username, password, email);
         this.firstname = firstname;
         this.lastname = lastname;
         this.description = description;
         this.seniority = seniority;
     }
-    public Dev(Integer id, String username, String password, String email, String firstname, String lastname, String description, String seniority) {
+    public Dev(Integer id, String username, String password, String email, String firstname, String lastname, String description, int seniority) {
         super(id, username, password, email);
         this.firstname = firstname;
         this.lastname = lastname;
@@ -63,11 +63,11 @@ public class Dev extends User{
         this.description = description;
     }
 
-    public String getSeniority() {
+    public int getSeniority() {
         return seniority;
     }
 
-    public void setSeniority(String seniority) {
+    public void setSeniority(int seniority) {
         this.seniority = seniority;
     }
 
