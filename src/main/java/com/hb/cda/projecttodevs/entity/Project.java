@@ -10,7 +10,6 @@ import java.util.List;
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
     private String title;
     private String description;
@@ -108,5 +107,16 @@ public class Project {
         this.applications = applications;
     }
 
-
+    @Override
+    public String toString() {
+        return "Project : " +
+                "id=" + id +
+                ", titre ='" + title + '\'' +
+                ", description ='" + description + '\'' +
+                ", theme =" + (theme != null ? theme.getName() : "null") +
+                ", budget =" + budget +
+                ", date de livraison =" + deliveryDate +
+                ", Propriétaire =" + (owner != null ? owner.getBusinessName() : "null") +
+                ';';
+    }
 }
