@@ -8,7 +8,6 @@ import java.time.LocalDate;
 public class Application {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
     private LocalDate appliedAt;
     private String message;
@@ -83,5 +82,17 @@ public class Application {
 
     public void setDev(Dev dev) {
         this.dev = dev;
+    }
+
+    @Override
+    public String toString() {
+        return "Application{" +
+                "id =" + id +
+                ", date de candidature =" + appliedAt +
+                ", message ='" + message + '\'' +
+                ", statut de la candidature =" + status +
+                ", projet =" + project +
+                ", developpeur =" + (dev != null ? dev : "null") +
+                '}';
     }
 }
