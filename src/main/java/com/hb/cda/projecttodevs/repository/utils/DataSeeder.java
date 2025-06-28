@@ -65,8 +65,8 @@ public class DataSeeder {
         em.persist(project2);
         em.persist(project3);
 
-        Application application1 = new Application(LocalDate.of(2025, 06, 25), "Je suis le roi du Front", ApplicationStatus.PENDING);
-        Application application2 = new Application(LocalDate.of(2025, 05, 25), "J'ai toutes les compétences requises", ApplicationStatus.APPROVED);
+        Application application1 = new Application(LocalDate.of(2025, 6, 25), "Je suis le roi du Front", ApplicationStatus.PENDING);
+        Application application2 = new Application(LocalDate.of(2025, 5, 25), "J'ai toutes les compétences requises", ApplicationStatus.APPROVED);
 
         application1.setDev(dev2);
         application1.setProject(project1);
@@ -76,6 +76,5 @@ public class DataSeeder {
         em.persist(application1);
         em.persist(application2);
 
-        em.getTransaction().commit();
     }
 }
