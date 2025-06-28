@@ -100,4 +100,14 @@ public class Dev extends User{
         }
         skills.add(skill);
     }
+
+    @Override
+    public String toString() {
+        return "Dev{" +
+                "prénom ='" + firstname + '\'' +
+                ", nom ='" + lastname + '\'' +
+                ", description= '" + description + '\'' +
+                ", ancienneté =" + seniority +
+                '}';
+    }
 }

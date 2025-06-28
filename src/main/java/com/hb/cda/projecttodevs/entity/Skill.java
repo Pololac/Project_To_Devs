@@ -9,7 +9,6 @@ import jakarta.persistence.Id;
 public class Skill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
     private String name;
 

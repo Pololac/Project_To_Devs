@@ -9,7 +9,6 @@ import java.util.List;
 public class Theme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
     private String name;
 
