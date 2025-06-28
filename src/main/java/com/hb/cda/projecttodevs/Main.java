@@ -337,7 +337,7 @@ public class Main {
 
 
         // ACCEPTER OU REFUSER LES CANDIDATURES (côté ProductOwner) = AppRepo.update
-        try {
+        /*try {
             em = Database.getManager();
             em.getTransaction().begin();
 
@@ -376,6 +376,6 @@ public class Main {
             if (em != null && em.isOpen()) {
                 em.close();
             }
-        }
+        }*/
     }
 }
